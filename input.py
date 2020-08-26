@@ -1,8 +1,9 @@
 from pynput.keyboard import Key, Controller
 import time
 
-keyboard = Controller()
+class KeyboardInput:
 
-time.sleep(5.0)
-
-keyboard.type('Teclando uma linha inteira')
+    def type_string(self, value, delay=0):
+        keyboard = Controller()
+        time.sleep(delay)
+        keyboard.type(value)
